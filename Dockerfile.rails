@@ -1,11 +1,7 @@
 # Dockerfile.rails
 FROM ruby:3.2
 
-RUN apt-get update -qq && apt-get install -y \
-  xvfb \
-  build-essential \
-  libpq-dev \
-  #libxss1 \
+#libxss1 \
   #libxext6 \
   #libxrender1 \
   #libxxf86vm1 \
@@ -16,6 +12,11 @@ RUN apt-get update -qq && apt-get install -y \
   #libxi6 \
   #libgl1-mesa-glx \
   #libglib2.0-0 \
+
+RUN apt-get update -qq && apt-get install -y \
+  xvfb \
+  build-essential \
+  libpq-dev \
   wget \
   curl \
   gnupg2 \
